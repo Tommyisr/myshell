@@ -56,7 +56,7 @@ int main(void)
 
 
  
-
+// test if for status
 waitpid(pid,NULL,0);
 
 
