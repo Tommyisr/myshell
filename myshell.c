@@ -55,9 +55,9 @@ int main(void)
         pch = argv[0];
 
 
- 
+
 // test if for status
-waitpid(pid,NULL,0);
+//waitpid(pid,NULL,0);
 
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -80,7 +80,7 @@ waitpid(pid,NULL,0);
         } else { // parent
             if(isBackground==0)
             wait(NULL);
-
+//                pid = waitpid(pid, NULL, 0);
         }
 
 
@@ -91,4 +91,21 @@ waitpid(pid,NULL,0);
     }
 
     return 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
