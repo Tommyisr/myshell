@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/OSHW1.dir/myshell.c.o  -o OSHW1.exe -Wl,--out-implib,libOSHW1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

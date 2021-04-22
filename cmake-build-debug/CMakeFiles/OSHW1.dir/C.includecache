@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Tommy/CLionProjects/OSHW1/myshell.c
+sys/types.h
+-
+sys/wait.h
+-
+stdio.h
+-
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+
