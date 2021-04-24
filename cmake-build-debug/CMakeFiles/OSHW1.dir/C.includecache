@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/Tommy/CLionProjects/OSHW1/myshell.c
+/cygdrive/c/Users/wormi/CLionProjects/myshell/myshell.c
 sys/types.h
 -
 sys/wait.h

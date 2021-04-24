@@ -18,6 +18,7 @@ int main(void)
     int i = 0;
     int isBackground = 0;
     pid_t pid;
+pid_t father;
     while (1)
     {
         i = 0;
@@ -25,20 +26,20 @@ int main(void)
         memset(command, 0, BUFFER_SIZE);
         fgets(command, BUFFER_SIZE, stdin);
 
-        printf(" pid is %d \n",pid);
-
         if(strncmp(command, "exit", 4) == 0)
         {
             break;
         }
 
         pch  = strtok(command, " \n");
-        while(pch != NULL){
-        argv[i] = pch;
-        i++;
-//        printf("%s \n", pch);
-        pch = strtok(NULL, " \n");
+
+        while(pch != NULL)
+        {
+            argv[i] = pch;
+            i++;
+            pch = strtok(NULL, " \n");
         }
+
         if(strcmp(argv[i-1],"&") == 0) {
             isBackground = 1;
             argv[i-1] = NULL;
@@ -48,22 +49,14 @@ int main(void)
         argv[i] = NULL;
         length = i;
 
-//        for(i=0; i<length; i++){
-//            printf("%s \n", argv[i]);
-//        }
-
         pch = argv[0];
 
 
 
-// test if for status
-//waitpid(pid,NULL,0);
 
 
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- * when 'execv' add printf "my pid and fathers' pid"
- * google about execv what exactly it executes
- */
+
+
 
 
         if ((pid = fork()) < 0) {
@@ -78,34 +71,16 @@ int main(void)
                 }
 
         } else { // parent
+            father = getpid();
             if(isBackground==0)
-            wait(NULL);
-//                pid = waitpid(pid, NULL, 0);
+                waitpid(pid, NULL, 0);
         }
 
 
 
-
-
-
-    }
+}
 
     return 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
