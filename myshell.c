@@ -18,7 +18,7 @@ int main(void)
     int i = 0;
     int isBackground = 0;
     pid_t pid;
-pid_t father;
+
     while (1)
     {
         i = 0;
@@ -71,7 +71,6 @@ pid_t father;
                 }
 
         } else { // parent
-            father = getpid();
             if(isBackground==0)
                 waitpid(pid, NULL, 0);
         }
