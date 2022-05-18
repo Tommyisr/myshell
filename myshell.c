@@ -18,7 +18,7 @@ int main(void)
     int i = 0;
     int isBackground = 0;
     pid_t pid;
-
+/asd
     while (1)
     {
         i = 0;
